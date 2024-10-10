@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <title>MMT Coders</title>
 </head>
 <body>
+
     <!-- Navbar -->
-     <div class="navbar">
+     <div class="navbar ">
+
         <div class="top-navbar">
-            <div class="sub-top h-[12vh] flex items-center justify-between w-[85vw] mx-auto">
+
+            <div class="sub-top md:h-[12vh] h-[20vh] flex flex-col md:flex-row items-center justify-evenly md:justify-between w-[85vw] mx-auto ">
                 <div class="search">
                     <div class="inp flex">
-                        <input class="border-2 w-[15vw] py-1 outline-none rounded-2xl text-[#000] font-semibold border-[#01d7f4] px-4" type="text"  placeholder="Search">
+                        <input class="border-2 md:w-[15vw] py-1 outline-none rounded-2xl text-[#000] font-semibold border-[#01d7f4] px-4" type="text"  placeholder="Search">
                         <div class="icon flex items-center rounded-r-2xl -ml-6 bg-[#01d7f4] px-3">
                             <i class="fa-solid fa-magnifying-glass text-white cursor-pointer"></i>
                         </div>
@@ -29,29 +33,73 @@
                         <i class="fa-solid fa-envelope text-xl"></i>
                         <p class="text-sm font-semibold text-[#000]">mmtcoders@gmail.com</p>
                     </div>
-                    <div class="calls flex items-center space-x-3">
+                    <div class="calls md:flex items-center space-x-3 hidden">
                         <i class="fa-solid fa-location-dot"></i>
                         <p class="text-sm font-semibold text-[#000]">Street 24 , Johnson road shalimar <br> commercial area , Pogapore</p>
                     </div>
                 </div>
+
+                <div class="calls md:hidden flex items-center space-x-3">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="text-sm font-semibold text-[#000]">Street 24 , Johnson road shalimar <br> commercial area , Pogapore</p>
+                </div>
+
             </div>
         </div>
         <div class="bg-[#01d7f4] h-[2px]"></div>
+
         <div class="btm-navbar">
-            <div class="w-[85vw] mx-auto" >
+            <div class="w-[95vw] md:w-[85vw] mx-auto flex items-center justify-between">
                 <div class="top">
-                    <img class="w-[130px]" src="./img/199563422.png" alt="">
+                    <img class="w-[130px]" src="./img/logo.png" alt="logo">
                 </div>
-                <div class="mid">
-                    <ul>
-                        <li>Home</li>
-                        <li>About Us</li>
-                        <li>About Us</li>
+
+                <div class="mid hidden md:block">
+                    <ul class="flex space-x-7 font-semibold cursor-pointer">
+                        <li>HOME</li>
+                        <li>ABOUT US</li>
+                        <li>SERVICES <i class="fa-solid fa-caret-down text-lg"></i></li>
+                        <li>PORTFOLIO</li>
+                        <li>CONTACT</li>
                     </ul>
                 </div>
-                <div class="btm"></div>
+
+                <div class="btm md:flex items-center space-x-2 hidden ">
+                    <div class="call bg-[#01d7f4] flex justify-center items-center w-[40px] h-[40px] px-4 rounded-full ">
+                        <i class="fa-solid fa-phone-volume text-lg text-white"></i>
+                    </div>
+                    <div class="req bg-[#01d7f4] rounded-3xl">
+                        <p class="text-white px-8 py-2 font-bold">Request A Quote</p>
+                    </div>
+                </div>
+
+                <div id="bars" class="bars border-2 rounded-md border-gray-300 px-3 md:hidden">
+                    <i class="fa-solid fa-bars text-2xl text-gray-700 cursor-pointer"></i>
+                </div>
+
             </div>
         </div>
+
+        <div id="menu" class="mid md:hidden block absolute bg-red-600">
+            <ul class="font-semibold cursor-pointer px-10 space-y-6">
+                <li>HOME</li>
+                <li>ABOUT US</li>
+                <li>SERVICES <i class="fa-solid fa-caret-down text-lg"></i></li>
+                <li>PORTFOLIO</li>
+                <li>CONTACT</li>
+            </ul>
+            <div class="btm flex items-center space-x-2 px-8 my-5">
+                <div class="call bg-[#01d7f4] flex justify-center items-center w-[40px] h-[40px] px-4 rounded-full ">
+                    <i class="fa-solid fa-phone-volume text-lg text-white"></i>
+                </div>
+                <div class="req bg-[#01d7f4] rounded-3xl">
+                    <p class="text-white px-8 py-2 font-bold">Request A Quote</p>
+                </div>
+            </div>
+        </div>
+
      </div>
 </body>
+
+    <script src="./app.js"></script>
 </html>
